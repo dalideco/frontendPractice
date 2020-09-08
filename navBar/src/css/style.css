@@ -1,0 +1,105 @@
+*{
+    margin:0;
+    padding:0 ;
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    height: 100vh ; 
+    background:rgba(238, 238, 238, 0.822);
+    font-family:sans-serif;
+}
+.main{
+    background:#fff;
+    box-shadow: -1px 3px 5px 0px rgba(46,74,117,0.63);
+    display:flex;
+    justify-content:center;
+    position:relative;
+    height:75px;
+    overflow:hidden;
+    z-index:2;
+}
+.main nav{
+    display:flex;
+    width:90%;
+    position:relative;
+    align-items:center;
+}
+.main nav .logo{
+    flex-basis:30%;
+    display:flex;
+}
+.main nav .logo h3{
+    font-size:32px;
+    font-weight:300;
+    margin:0 5px;
+    color:black;
+    text-shadow: 2px 3px 11px rgba(0,0,0,0.77);
+    height:auto;
+}
+.main nav .logo .addict{
+    color:blue;
+}
+
+.main nav ul{
+    flex:1;
+    text-align:center;
+}
+.main nav ul li{
+    display:inline-block;
+    list-style:none;
+    margin:0 15px;
+}
+.main nav ul li a{
+    text-decoration:none;
+    color:black;
+}
+.button img{
+    width:20px;
+    transform: rotate(0);
+}
+
+.button{
+    position:absolute;
+    right:5%;top:28px;
+    z-index:1;
+}
+
+
+@media(max-width:600px){
+    .main{
+        transition:height 300ms ease-in-out;
+    }
+    .main nav{
+        width:100%;
+    }
+    .main nav .logo {
+        position:absolute;
+        left:7%;
+        top:20px;
+    }
+    .main nav ul{
+        position:absolute;
+        top:75px;
+        width: 100%;
+        text-align:left;
+        display:flex;
+        flex-direction:column;
+    }
+    .main nav ul li {
+        width:100%;
+        margin:0; 
+        padding:10px 10%;
+        transition:background 300ms ease-in-out;
+        position:relative;
+    }
+    .main nav ul li:hover{
+        background:blue;
+    }
+    .button{
+        top:25px;
+        z-index:3;
+        transition:transform 300ms ease-in-out;
+    }
+}

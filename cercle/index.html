@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>acer phone</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="main">
+		<nav>
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="nav-links">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Phone</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="information">
+			<div class="overlay"></div>
+			<img src="images/mobile.png" class="mobile">
+			<div class="circle">
+				
+				<div class="feature one">
+					<img src="images/camera.png">
+					<div class="writing">
+						<h1>Camera</h1>
+						<p>15 mega pixel</p>
+					</div>
+				</div>
+				<div class="feature two">
+					<img src="images/processor.png">
+					<div class="writing">
+						<h1>Processor</h1>
+						<p>snapdragon dra chneya</p>
+					</div>
+				</div>
+				<div class="feature three">
+					<img src="images/battery.png">
+					<div class="writing">
+						<h1>Battery</h1>
+						<p>5500mAh fast charge</p>
+					</div>
+				</div>
+				<div class="feature four">
+					<img src="images/display.png">
+					<div class="writing">
+						<h1>Display</h1>
+						<p>1080pixels full HD</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id ="buttons">
+			<img src="images/arrow.png" class="up" onclick="turn(-90)">
+			<h3>Features</h3>
+			<img src="images/arrow.png" class="down" onclick="turn(90)">
+		</div>
+	</div>
+	<script type="text/javascript">
+		const circle=document.querySelector('.circle');
+		let rotateValue= circle.style.transform;
+		let rotateSum= rotateValue;
+
+		function turn(angle){
+			rotateSum=rotateValue +`rotate(${angle}deg)`;
+			circle.style.transform= rotateSum;
+			rotateValue=rotateSum;
+		}
+		
+
+	</script>
+</body>
+</html>
