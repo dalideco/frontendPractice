@@ -1,0 +1,75 @@
+.second {
+    color:black;
+    text-align:center;
+    display:grid ; 
+    margin: auto; 
+    width:90%;
+    max-width:1250px;
+    overflow:hidden;
+    align-items: center;
+    grid-template-columns:repeat(3,minmax(min-content,1fr));
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas:
+        "title title title"
+        "potato heart apple"
+        "orange heart cabbage";
+    row-gap: 2rem;
+    svg{
+        width:100%;
+    }
+    h1{
+        grid-area:title;
+        font-family:$title-font;
+    }
+    img{
+        padding:0 1rem;
+        grid-area:heart;
+        width:100%;
+        height:100%;
+        object-fit: contain;
+    }
+    svg{
+        width:4.5rem;
+        height:4.5rem;
+    }
+        
+    .potato{
+        grid-area: potato;
+    }
+    .apple{
+        grid-area:apple;
+    }
+    .orange{
+        grid-area: orange;
+    }
+    .cabbage{
+        grid-area:cabbage;
+    }
+    &-notcenter{
+        padding:0 1rem;
+    }
+}
+
+@media(max-width:850px){
+    .second{
+        grid-template-columns: repeat(2,minmax(min-content,1fr));
+        grid-template-areas:
+        "title title"
+        "potato apple"
+        "orange cabbage";
+        img{
+            display:none;
+        }
+    }
+}
+@media(max-width:450px){
+    .second{
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "title"
+            "potato"
+            "apple"
+            "orange"
+            "cabbage";
+    }
+}

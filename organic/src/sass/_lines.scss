@@ -1,0 +1,32 @@
+@mixin lining{
+    width:20px;
+    height:2px;
+    background:$primary-color;
+    margin:5px;
+}
+
+
+.line {
+    display:none;
+    @each $number in (one,two,three){
+        &-#{$number}{
+            @include lining;
+            transition : transform 300ms ease-in-out;
+        }
+    }
+}
+@media(max-width:712px){
+    .line{
+        display:block;
+    }
+    #line-one{
+        transform: rotate(45deg) translateY(4.2px);
+    }
+    #line-two{
+        display:none;
+    }
+    #line-three{
+        transform: rotate(-45deg) translateY(-4.2px);
+    }
+}
+

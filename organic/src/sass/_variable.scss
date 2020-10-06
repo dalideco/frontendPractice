@@ -1,0 +1,23 @@
+$header-height:750px;
+$primary-color: #fff;
+$secondary-color:#32CD32;
+$title-font: 'Sansita Swashed', cursive;
+
+@mixin flexer($direction, $spacing,$Valign){
+    display:flex; 
+    flex-direction:$direction;
+    justify-content:$spacing;
+    align-items:$Valign;
+}
+@mixin container{
+    margin:0 auto;
+    width:90% ;
+    max-width:1250px;
+}
+
+@mixin putBackground($url){
+    background : url($url);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+}
